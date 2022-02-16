@@ -1,0 +1,307 @@
+.game {
+  width: 650px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  margin-top: 180px;
+  margin-bottom: 20px;
+  width: 500px;
+  gap: 40px;
+}
+@media (max-width: 560px) {
+  .game {
+    width: 90%;
+    height: 100%;
+  }
+  .game .logo {
+    width: 40px !important;
+  }
+}
+.game .game-title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.game .game-title .XO-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+.game .game-title .XO-title svg {
+  width: 30px;
+}
+.game .game-title button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #a8bfc9;
+  border: 0px;
+  padding: 20px 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 5px 0px 0px #6b8997;
+  box-shadow: 0px 5px 0px 0px #6b8997;
+}
+.game .game-title button svg {
+  width: 16px;
+  color: #304752;
+}
+.game .playing-feild {
+  width: 100%;
+  height: 500px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.game .playing-feild div {
+  background-color: #1f3641;
+  width: 100%;
+  min-height: 130px;
+  -webkit-box-shadow: 0px 7.5px 0px 0px #10212a;
+  box-shadow: 0px 7.5px 0px 0px #10212a;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.game .playing-feild div .logo {
+  width: 60px;
+}
+.game .score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.game .score button {
+  width: 30%;
+  border-radius: 7.5px;
+  border: 0px;
+  height: 60px;
+}
+.game .score button strong {
+  font-size: 18px;
+}
+.game .score button:first-of-type {
+  background-color: #2ca09c;
+}
+.game .score button:nth-of-type(2) {
+  background-color: #a8bfc9;
+}
+.game .score button:last-of-type {
+  background-color: #f2b137;
+}
+.game .winner {
+  display: none !important;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.445);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.game .winner > div {
+  background-color: #1a2a33;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+.game .winner > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 20px;
+}
+.game .winner > div > div h6 {
+  color: #6c7376;
+  font-weight: 700;
+}
+.game .winner > div > div h1 {
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 37.5px;
+}
+.game .winner > div > div svg {
+  width: 60px;
+}
+.game .winner > div > div .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.game .winner > div > div .actions button {
+  padding: 15px;
+  border: 0px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+.game .winner > div > div .actions button:first-child {
+  background-color: #a8bfc9;
+  -webkit-box-shadow: 0px 4px 0px 0px #6b8997;
+  box-shadow: 0px 4px 0px 0px #6b8997;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #1a2a33;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 30px;
+  width: 400px;
+}
+.main-menu .XO-title {
+  gap: 10px;
+}
+.main-menu .XO-title svg {
+  width: 35px;
+}
+.main-menu .X-or-O {
+  padding: 20px;
+  background-color: #1f3641;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 15px;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 7.5px 1px 1px #152229;
+  box-shadow: 1px 7.5px 1px 1px #152229;
+}
+.main-menu .X-or-O h6:first-of-type {
+  color: rgba(255, 255, 255, 0.575);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+.main-menu .X-or-O h6:last-of-type {
+  color: rgba(255, 255, 255, 0.329);
+  letter-spacing: 1.5px;
+}
+.main-menu .X-or-O .choices {
+  background-color: #1a2a33;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.main-menu .X-or-O .choices .choice {
+  padding-right: 35px;
+  padding-left: 35px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 10px;
+  width: 100%;
+}
+.main-menu .X-or-O .choices svg {
+  width: 35px;
+  color: #a8bfc9;
+}
+.main-menu .new-game {
+  color: black;
+  background-color: #31c3bd;
+  width: 100%;
+  padding: 14px;
+  border: 0px;
+  border-radius: 14px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  -webkit-box-shadow: 0px 7px 0px 0px #118c87;
+  box-shadow: 0px 7px 0px 0px #118c87;
+}
+.clicked {
+  background-color: #a8bfc9;
+}
+.clicked svg {
+  color: #1a2a33 !important;
+}
